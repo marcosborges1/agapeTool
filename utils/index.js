@@ -66,6 +66,7 @@ module.exports = {
 			if (err) throw err;
 			console.log(`File '${path}' Saved!`);
 		});
+		return path
 	},
 	removeArrayType: function (array, fieldsTypedArray) {
 		const keyArray = Object.entries(array);

@@ -23,11 +23,16 @@ const querySchema = gql`
 	}
 	type Query {
 		getSimilaritiesFromAPIs(dataAPI: [inputAPI]): Report!
-		getExtractedApiList(apiList: [inputAPI]): [newApiExtracted]
+		getExtractedApiList(apiList: [inputAPI]): exApiList
 		getTestEndpoints(dataAPI: [inputAPI]): JSON
 	}
 
-	type newApiExtracted {
+	type exApiList {
+		extractedApiList: [extractedApi]
+		fileGenerated: String
+	}
+
+	type extractedApi {
 		name: String
 		requests: JSON
 		responses: JSON

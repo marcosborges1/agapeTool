@@ -108,9 +108,14 @@ const resolvers = {
 				return sanitizeName(res.name)
 			})
 			logger.info(generateFilename(name_i.join("-")))
-			saveJson(`data/${name_i.join("-")}.json`, arrayJson, 4);
+			fileGenerated = saveJson(`data/${name_i.join("-")}.json`, arrayJson, 4);
 
-			return arrayJson;
+			return {
+				"extractedApiList": arrayJson,
+				fileGenerated
+			}
+
+			// return arrayJson;
 		},
 		getSimilaritiesFromAPIs: async (_, { apiList }) => {
 			const len = apiList.length;
