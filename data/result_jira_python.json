@@ -1,0 +1,4632 @@
+[
+    {
+        "name": "Jira 7.6.1",
+        "requests": [
+            {
+                "/api/2/component": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/component/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/component/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/component/{id}/relatedIssueCounts": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/projectvalidate/key": {
+                    "get": [
+                        {
+                            "key": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/role": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/role/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/role/{id}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/role/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/jql/autocompletedata": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/jql/autocompletedata/suggestions": {
+                    "get": [
+                        {
+                            "fieldName": "string"
+                        },
+                        {
+                            "fieldValue": "string"
+                        },
+                        {
+                            "predicateName": "string"
+                        },
+                        {
+                            "predicateValue": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/notificationscheme": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/resolution": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/resolution/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/application-properties": {
+                    "get": [
+                        {
+                            "key": "string"
+                        },
+                        {
+                            "permissionLevel": "string"
+                        },
+                        {
+                            "keyFilter": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/application-properties/advanced-settings": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/application-properties/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/configuration": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/reindex": {
+                    "get": [
+                        {
+                            "taskId": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/reindex": {
+                    "post": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "indexComments": true
+                        },
+                        {
+                            "indexChangeHistory": true
+                        },
+                        {
+                            "indexWorklogs": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/reindex/issue": {
+                    "post": [
+                        {
+                            "issueId": "string"
+                        },
+                        {
+                            "indexComments": true
+                        },
+                        {
+                            "indexChangeHistory": true
+                        },
+                        {
+                            "indexWorklogs": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/reindex/progress": {
+                    "get": [
+                        {
+                            "taskId": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/search": {
+                    "get": [
+                        {
+                            "jql_fields": [
+                                {
+                                    "affectedVersion": "string"
+                                },
+                                {
+                                    "approval": "string"
+                                },
+                                {
+                                    "assignee": "string"
+                                },
+                                {
+                                    "attachments": "string"
+                                },
+                                {
+                                    "category": "string"
+                                },
+                                {
+                                    "comment": "string"
+                                },
+                                {
+                                    "component": "string"
+                                },
+                                {
+                                    "created": "string"
+                                },
+                                {
+                                    "creator": "string"
+                                },
+                                {
+                                    "cf[]": "string"
+                                },
+                                {
+                                    "Customer Request Type": "string"
+                                },
+                                {
+                                    "description": "string"
+                                },
+                                {
+                                    "due": "string"
+                                },
+                                {
+                                    "environment": "string"
+                                },
+                                {
+                                    "epic link": "string"
+                                },
+                                {
+                                    "filter": "string"
+                                },
+                                {
+                                    "fixVersion": "string"
+                                },
+                                {
+                                    "issueKey": "string"
+                                },
+                                {
+                                    "labels": "string"
+                                },
+                                {
+                                    "lastViewed": "string"
+                                },
+                                {
+                                    "level": "string"
+                                },
+                                {
+                                    "originalEstimate": "string"
+                                },
+                                {
+                                    "parent": "string"
+                                },
+                                {
+                                    "priority": "string"
+                                },
+                                {
+                                    "project": "string"
+                                },
+                                {
+                                    "remainingEstimate": "string"
+                                },
+                                {
+                                    "reporter": "string"
+                                },
+                                {
+                                    "request-channel-type": "string"
+                                },
+                                {
+                                    "request-last-activity-time": "string"
+                                },
+                                {
+                                    "resolution": "string"
+                                },
+                                {
+                                    "resolved": "string"
+                                },
+                                {
+                                    "sprint": "string"
+                                },
+                                {
+                                    "status": "string"
+                                },
+                                {
+                                    "summary": "string"
+                                },
+                                {
+                                    "text": "string"
+                                },
+                                {
+                                    "timeSpent": "string"
+                                },
+                                {
+                                    "Type": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "issueType": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "updated": "string"
+                                },
+                                {
+                                    "voter": "string"
+                                },
+                                {
+                                    "votes": 0
+                                },
+                                {
+                                    "watcher": "string"
+                                },
+                                {
+                                    "watchers": 0
+                                },
+                                {
+                                    "worklogAuthor": "string"
+                                },
+                                {
+                                    "Work log comment": [
+                                        {
+                                            "comment": "string"
+                                        },
+                                        {
+                                            "summary": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "worklogDate": "string"
+                                },
+                                {
+                                    "workRatio": 0
+                                }
+                            ]
+                        },
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "validateQuery": true
+                        },
+                        {
+                            "fields": "string"
+                        },
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/search": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/worklog/updated": {
+                    "get": [
+                        {
+                            "since": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/worklog/deleted": {
+                    "get": [
+                        {
+                            "since": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/worklog/list": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/statuscategory": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/statuscategory/{idOrKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/status": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/status/{idOrName}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/type": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/type/{projectTypeKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/type/{projectTypeKey}/accessible": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issueLinkType": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issueLinkType": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issueLinkType/{issueLinkTypeId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issueLinkType/{issueLinkTypeId}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issuesecurityschemes": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuesecurityschemes/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/securitylevel/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/serverInfo": {
+                    "get": [
+                        {
+                            "doHealthCheck": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/subtask": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/subtask/move": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/subtask/move": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/role": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/role": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/role/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/role/{id}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/role/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/role/{id}/actors": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/role/{id}/actors": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/transitions": {
+                    "get": [
+                        {
+                            "transitionId": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/transitions": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/votes": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/votes": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}": {
+                    "get": [
+                        {
+                            "fields": "string"
+                        },
+                        {
+                            "expand": "string"
+                        },
+                        {
+                            "properties": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}": {
+                    "put": [
+                        {
+                            "notifyUsers": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/watchers": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/watchers": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/bulk": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/createmeta": {
+                    "get": [
+                        {
+                            "projectIds": "string"
+                        },
+                        {
+                            "projectKeys": "string"
+                        },
+                        {
+                            "issuetypeIds": "string"
+                        },
+                        {
+                            "issuetypeNames": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/editmeta": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/picker": {
+                    "get": [
+                        {
+                            "query": "string"
+                        },
+                        {
+                            "currentJQL": "string"
+                        },
+                        {
+                            "currentIssueKey": "string"
+                        },
+                        {
+                            "currentProjectId": "string"
+                        },
+                        {
+                            "showSubTasks": true
+                        },
+                        {
+                            "showSubTaskParent": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/remotelink": {
+                    "get": [
+                        {
+                            "globalId": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/remotelink": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/remotelink/{linkId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/remotelink/{linkId}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/worklog": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/worklog": {
+                    "post": [
+                        {
+                            "adjustEstimate": "string"
+                        },
+                        {
+                            "newEstimate": "string"
+                        },
+                        {
+                            "reduceBy": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/worklog/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/worklog/{id}": {
+                    "put": [
+                        {
+                            "adjustEstimate": "string"
+                        },
+                        {
+                            "newEstimate": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/comment/{id}": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/comment/{id}": {
+                    "put": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/comment": {
+                    "get": [
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "orderBy": "string"
+                        },
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/comment": {
+                    "post": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/assignee": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/notify": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/avatar/{type}/temporary": {
+                    "post": [
+                        {
+                            "filename": "string"
+                        },
+                        {
+                            "size": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/avatar/{type}/temporaryCrop": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/avatar/{type}/system": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs": {
+                    "get": [
+                        {
+                            "projectKey": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}/move/{pos}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/availableFields": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}/fields/{id}/move": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/screens/addToDefault/{fieldId}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}/fields": {
+                    "get": [
+                        {
+                            "projectKey": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}/fields": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/notificationscheme": {
+                    "get": [
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/notificationscheme/{id}": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/groups/picker": {
+                    "get": [
+                        {
+                            "query": "string"
+                        },
+                        {
+                            "exclude": "string"
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "userName": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/projectCategory": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/projectCategory": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/projectCategory/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/projectCategory/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/licenseValidator": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/workflowscheme": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/issuetype/{issueType}": {
+                    "get": [
+                        {
+                            "returnDraftIfExists": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/issuetype/{issueType}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}": {
+                    "get": [
+                        {
+                            "returnDraftIfExists": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/createdraft": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/workflow": {
+                    "get": [
+                        {
+                            "workflowName": "string"
+                        },
+                        {
+                            "returnDraftIfExists": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/workflow": {
+                    "put": [
+                        {
+                            "workflowName": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/workflow": {
+                    "get": [
+                        {
+                            "workflowName": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/workflow": {
+                    "put": [
+                        {
+                            "workflowName": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/issuetype/{issueType}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/issuetype/{issueType}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/default": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/default": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/default": {
+                    "get": [
+                        {
+                            "returnDraftIfExists": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/default": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/upgrade": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/upgrade": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/dashboard": {
+                    "get": [
+                        {
+                            "filter": "string"
+                        },
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/dashboard/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/attachment/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/attachment/meta": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/attachment/{id}/expand/raw": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/attachment/{id}/expand/human": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/index/summary": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{issueTypeId}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{issueTypeId}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{issueTypeId}/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/customFieldOption/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/auditing/record": {
+                    "get": [
+                        {
+                            "offset": 0
+                        },
+                        {
+                            "limit": 0
+                        },
+                        {
+                            "filter": "string"
+                        },
+                        {
+                            "from": "string"
+                        },
+                        {
+                            "to": "string"
+                        },
+                        {
+                            "projectIds": "string"
+                        },
+                        {
+                            "userIds": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/auditing/record": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issuetype": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}/alternatives": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}/avatar/temporary": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}/avatar": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/groupuserpicker": {
+                    "get": [
+                        {
+                            "query": "string"
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "showAvatar": true
+                        },
+                        {
+                            "fieldId": "string"
+                        },
+                        {
+                            "projectId": "string"
+                        },
+                        {
+                            "issueTypeId": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/group": {
+                    "get": [
+                        {
+                            "groupname": "string"
+                        },
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/group": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/group/member": {
+                    "get": [
+                        {
+                            "groupname": "string"
+                        },
+                        {
+                            "includeInactiveUsers": true
+                        },
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/group/user": {
+                    "post": [
+                        {
+                            "groupname": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/mypreferences": {
+                    "get": [
+                        {
+                            "key": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/mypreferences": {
+                    "put": [
+                        {
+                            "key": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflow": {
+                    "get": [
+                        {
+                            "workflowName": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflow/api/2/transitions/{id}/properties": {
+                    "get": [
+                        {
+                            "includeReservedKeys": true
+                        },
+                        {
+                            "key": "string"
+                        },
+                        {
+                            "workflowName": "string"
+                        },
+                        {
+                            "workflowMode": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflow/api/2/transitions/{id}/properties": {
+                    "post": [
+                        {
+                            "key": "string"
+                        },
+                        {
+                            "workflowName": "string"
+                        },
+                        {
+                            "workflowMode": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/workflow/api/2/transitions/{id}/properties": {
+                    "put": [
+                        {
+                            "key": "string"
+                        },
+                        {
+                            "workflowName": "string"
+                        },
+                        {
+                            "workflowMode": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        },
+                        {
+                            "recent": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/avatar/temporary": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/avatar": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/avatar": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}": {
+                    "put": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/type/{newProjectTypeKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/versions": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/version": {
+                    "get": [
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "orderBy": "string"
+                        },
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/components": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/avatars": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/statuses": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/reindex/request": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/reindex/request/bulk": {
+                    "get": [
+                        {
+                            "requestId": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/reindex/request/{requestId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/issuesecuritylevelscheme": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/applicationrole": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/applicationrole": {
+                    "put": [
+                        {
+                            "If-Match": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/applicationrole/{key}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/applicationrole/{key}": {
+                    "put": [
+                        {
+                            "If-Match": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/password/policy": {
+                    "get": [
+                        {
+                            "hasOldPassword": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/password/policy/createUser": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/password/policy/updateUser": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/priority": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/priority/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissionscheme": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/permissionscheme": {
+                    "post": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}": {
+                    "put": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/permissionscheme/{permissionSchemeId}/attribute/{attributeKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{permissionSchemeId}/attribute/{key}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}/permission": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}/permission": {
+                    "post": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}/permission/{permissionId}": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/comment/{commentId}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/comment/{commentId}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/comment/{commentId}/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/filter": {
+                    "post": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/filter/favourite": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        },
+                        {
+                            "enableSharedUsers": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/filter/defaultShareScope": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/defaultShareScope": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/columns": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/columns": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/permission": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/permission": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/permission/{permissionId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/{id}": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        },
+                        {
+                            "enableSharedUsers": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/filter/{id}": {
+                    "put": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/attachments": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/{id}/relatedIssueCounts": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{id}/unresolvedIssueCount": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{id}/move": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/remotelink": {
+                    "get": [
+                        {
+                            "globalId": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/version/{versionId}/remotelink": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{versionId}/remotelink": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/{versionId}/remotelink/{globalId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{versionId}/remotelink/{globalId}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/{id}": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/version/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/version/{id}/removeAndSwap": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/{id}/mergeto/{moveIssuesTo}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/field": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/field": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/user": {
+                    "get": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "key": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/user": {
+                    "put": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "key": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/columns": {
+                    "get": [
+                        {
+                            "username": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/columns": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/user/avatar/temporary": {
+                    "post": [
+                        {
+                            "username": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/avatar": {
+                    "post": [
+                        {
+                            "username": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/avatar": {
+                    "put": [
+                        {
+                            "username": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/avatars": {
+                    "get": [
+                        {
+                            "username": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/search": {
+                    "get": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "includeActive": true
+                        },
+                        {
+                            "includeInactive": true
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/picker": {
+                    "get": [
+                        {
+                            "query": "string"
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "showAvatar": true
+                        },
+                        {
+                            "exclude": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/assignable/search": {
+                    "get": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "project": "string"
+                        },
+                        {
+                            "issueKey": "string"
+                        },
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        },
+                        {
+                            "actionDescriptorId": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/password": {
+                    "put": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "key": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/viewissue/search": {
+                    "get": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "issueKey": "string"
+                        },
+                        {
+                            "projectKey": "string"
+                        },
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/permission/search": {
+                    "get": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "permissions": "string"
+                        },
+                        {
+                            "issueKey": "string"
+                        },
+                        {
+                            "projectKey": "string"
+                        },
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/assignable/multiProjectSearch": {
+                    "get": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "projectKeys": "string"
+                        },
+                        {
+                            "startAt": 0
+                        },
+                        {
+                            "maxResults": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/application": {
+                    "post": [
+                        {
+                            "username": "string"
+                        },
+                        {
+                            "applicationKey": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/universal_avatar/type/{type}/owner/{owningObjectId}/temp": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/universal_avatar/type/{type}/owner/{owningObjectId}/avatar": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/universal_avatar/type/{type}/owner/{owningObjectId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/monitoring/jmx/getAvailableMetrics": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/monitoring/jmx/areMetricsExposed": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/monitoring/jmx/startExposing": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/monitoring/jmx/stopExposing": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/settings/columns": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/settings/columns": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/settings/baseUrl": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/permissionscheme": {
+                    "get": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/permissionscheme": {
+                    "put": [
+                        {
+                            "expand": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/securitylevel": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/myself": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/myself": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/myself/password": {
+                    "put": null
+                }
+            },
+            {
+                "/auth/1/session": {
+                    "get": null
+                }
+            },
+            {
+                "/auth/1/session": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issueLink": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issueLink/{linkId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/cancel": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/start": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/approve": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/retryUpgrade": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/state": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissions": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/mypermissions": {
+                    "get": [
+                        {
+                            "projectKey": "string"
+                        },
+                        {
+                            "projectId": "string"
+                        },
+                        {
+                            "issueKey": "string"
+                        },
+                        {
+                            "issueId": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/properties/": {
+                    "get": [
+                        {
+                            "userKey": "string"
+                        },
+                        {
+                            "username": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/properties/{propertyKey}": {
+                    "get": [
+                        {
+                            "userKey": "string"
+                        },
+                        {
+                            "username": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/user/properties/{propertyKey}": {
+                    "put": [
+                        {
+                            "userKey": "string"
+                        },
+                        {
+                            "username": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/2/dashboard/{dashboardId}/items/{itemId}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}": {
+                    "put": null
+                }
+            }
+        ],
+        "responses": [
+            {
+                "/api/2/component": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/component/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/component/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/component/{id}/relatedIssueCounts": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/projectvalidate/key": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/role": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/role/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/role/{id}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/role/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/jql/autocompletedata": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/jql/autocompletedata/suggestions": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/notificationscheme": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/resolution": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/resolution/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/application-properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/application-properties/advanced-settings": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/application-properties/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/configuration": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/reindex": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/reindex": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/reindex/issue": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/reindex/progress": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/search": {
+                    "get": {
+                        "SearchResults": [
+                            {
+                                "expand": "string"
+                            },
+                            {
+                                "startAt": 0
+                            },
+                            {
+                                "maxResults": 0
+                            },
+                            {
+                                "total": 0
+                            },
+                            {
+                                "issues": [
+                                    {
+                                        "expand": "string"
+                                    },
+                                    {
+                                        "id": "string"
+                                    },
+                                    {
+                                        "self": "string"
+                                    },
+                                    {
+                                        "key": "string"
+                                    },
+                                    {
+                                        "fields": [
+                                            "object"
+                                        ]
+                                    },
+                                    {
+                                        "renderedFields": [
+                                            "object"
+                                        ]
+                                    },
+                                    {
+                                        "properties": [
+                                            {
+                                                "properties": [
+                                                    "object"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "names": [
+                                            "object"
+                                        ]
+                                    },
+                                    {
+                                        "schema": [
+                                            "object"
+                                        ]
+                                    },
+                                    {
+                                        "transitions": [
+                                            {
+                                                "id": "string"
+                                            },
+                                            {
+                                                "name": "string"
+                                            },
+                                            {
+                                                "to": [
+                                                    {
+                                                        "self": "string"
+                                                    },
+                                                    {
+                                                        "statusColor": "string"
+                                                    },
+                                                    {
+                                                        "description": "string"
+                                                    },
+                                                    {
+                                                        "iconUrl": "string"
+                                                    },
+                                                    {
+                                                        "name": "string"
+                                                    },
+                                                    {
+                                                        "id": "string"
+                                                    },
+                                                    {
+                                                        "statusCategory": [
+                                                            {
+                                                                "self": "string"
+                                                            },
+                                                            {
+                                                                "id": 0
+                                                            },
+                                                            {
+                                                                "key": "string"
+                                                            },
+                                                            {
+                                                                "colorName": "string"
+                                                            },
+                                                            {
+                                                                "name": "string"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "fields": [
+                                                    "object"
+                                                ]
+                                            },
+                                            {
+                                                "expand": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "operations": [
+                                            {
+                                                "linkGroups": [
+                                                    {
+                                                        "id": "string"
+                                                    },
+                                                    {
+                                                        "styleClass": "string"
+                                                    },
+                                                    {
+                                                        "header": [
+                                                            {
+                                                                "id": "string"
+                                                            },
+                                                            {
+                                                                "styleClass": "string"
+                                                            },
+                                                            {
+                                                                "iconClass": "string"
+                                                            },
+                                                            {
+                                                                "label": "string"
+                                                            },
+                                                            {
+                                                                "title": "string"
+                                                            },
+                                                            {
+                                                                "href": "string"
+                                                            },
+                                                            {
+                                                                "weight": 0
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "weight": 0
+                                                    },
+                                                    {
+                                                        "links": [
+                                                            {
+                                                                "id": "string"
+                                                            },
+                                                            {
+                                                                "styleClass": "string"
+                                                            },
+                                                            {
+                                                                "iconClass": "string"
+                                                            },
+                                                            {
+                                                                "label": "string"
+                                                            },
+                                                            {
+                                                                "title": "string"
+                                                            },
+                                                            {
+                                                                "href": "string"
+                                                            },
+                                                            {
+                                                                "weight": 0
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "groups": [
+                                                            "string"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "editmeta": [
+                                            {
+                                                "fields": [
+                                                    "object"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "changelog": [
+                                            {
+                                                "startAt": 0
+                                            },
+                                            {
+                                                "maxResults": 0
+                                            },
+                                            {
+                                                "total": 0
+                                            },
+                                            {
+                                                "histories": [
+                                                    {
+                                                        "id": "string"
+                                                    },
+                                                    {
+                                                        "author": [
+                                                            {
+                                                                "self": "string"
+                                                            },
+                                                            {
+                                                                "name": "string"
+                                                            },
+                                                            {
+                                                                "key": "string"
+                                                            },
+                                                            {
+                                                                "emailAddress": "string"
+                                                            },
+                                                            {
+                                                                "avatarUrls": [
+                                                                    "object"
+                                                                ]
+                                                            },
+                                                            {
+                                                                "displayName": "string"
+                                                            },
+                                                            {
+                                                                "active": true
+                                                            },
+                                                            {
+                                                                "timeZone": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "created": "string"
+                                                    },
+                                                    {
+                                                        "items": [
+                                                            {
+                                                                "field": "string"
+                                                            },
+                                                            {
+                                                                "fieldtype": "string"
+                                                            },
+                                                            {
+                                                                "from": "string"
+                                                            },
+                                                            {
+                                                                "fromString": "string"
+                                                            },
+                                                            {
+                                                                "to": "string"
+                                                            },
+                                                            {
+                                                                "toString": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "historyMetadata": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "description": "string"
+                                                            },
+                                                            {
+                                                                "descriptionKey": "string"
+                                                            },
+                                                            {
+                                                                "activityDescription": "string"
+                                                            },
+                                                            {
+                                                                "activityDescriptionKey": "string"
+                                                            },
+                                                            {
+                                                                "emailDescription": "string"
+                                                            },
+                                                            {
+                                                                "emailDescriptionKey": "string"
+                                                            },
+                                                            {
+                                                                "actor": [
+                                                                    {
+                                                                        "id": "string"
+                                                                    },
+                                                                    {
+                                                                        "displayName": "string"
+                                                                    },
+                                                                    {
+                                                                        "displayNameKey": "string"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    },
+                                                                    {
+                                                                        "avatarUrl": "string"
+                                                                    },
+                                                                    {
+                                                                        "url": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "generator": [
+                                                                    {
+                                                                        "id": "string"
+                                                                    },
+                                                                    {
+                                                                        "displayName": "string"
+                                                                    },
+                                                                    {
+                                                                        "displayNameKey": "string"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    },
+                                                                    {
+                                                                        "avatarUrl": "string"
+                                                                    },
+                                                                    {
+                                                                        "url": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "cause": [
+                                                                    {
+                                                                        "id": "string"
+                                                                    },
+                                                                    {
+                                                                        "displayName": "string"
+                                                                    },
+                                                                    {
+                                                                        "displayNameKey": "string"
+                                                                    },
+                                                                    {
+                                                                        "type": "string"
+                                                                    },
+                                                                    {
+                                                                        "avatarUrl": "string"
+                                                                    },
+                                                                    {
+                                                                        "url": "string"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "extraData": [
+                                                                    "object"
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "versionedRepresentations": [
+                                            "object"
+                                        ]
+                                    },
+                                    {
+                                        "fieldsToInclude": [
+                                            "object"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "warningMessages": [
+                                    "string"
+                                ]
+                            },
+                            {
+                                "names": [
+                                    "object"
+                                ]
+                            },
+                            {
+                                "schema": [
+                                    "object"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "/api/2/search": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/worklog/updated": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/worklog/deleted": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/worklog/list": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/statuscategory": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/statuscategory/{idOrKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/status": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/status/{idOrName}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/type": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/type/{projectTypeKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/type/{projectTypeKey}/accessible": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issueLinkType": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issueLinkType": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issueLinkType/{issueLinkTypeId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issueLinkType/{issueLinkTypeId}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issuesecurityschemes": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuesecurityschemes/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/securitylevel/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/serverInfo": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/subtask": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/subtask/move": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/subtask/move": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/role": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/role": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/role/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/role/{id}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/role/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/role/{id}/actors": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/role/{id}/actors": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/transitions": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/transitions": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/votes": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/votes": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/watchers": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/watchers": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/bulk": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/createmeta": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/editmeta": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/picker": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/remotelink": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/remotelink": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/remotelink/{linkId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/remotelink/{linkId}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/worklog": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/worklog": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/worklog/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/worklog/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/comment/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/comment/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/comment": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/comment": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/assignee": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/notify": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/avatar/{type}/temporary": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/avatar/{type}/temporaryCrop": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/avatar/{type}/system": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}/move/{pos}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/availableFields": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}/fields/{id}/move": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/screens/addToDefault/{fieldId}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}/fields": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/screens/{screenId}/tabs/{tabId}/fields": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/notificationscheme": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/notificationscheme/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/groups/picker": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/projectCategory": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/projectCategory": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/projectCategory/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/projectCategory/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/licenseValidator": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/workflowscheme": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/issuetype/{issueType}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/issuetype/{issueType}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/createdraft": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/workflow": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/workflow": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/workflow": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/workflow": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/issuetype/{issueType}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/issuetype/{issueType}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/default": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/draft/default": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/default": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflowscheme/{id}/default": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/upgrade": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/upgrade": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/dashboard": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/dashboard/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/attachment/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/attachment/meta": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/attachment/{id}/expand/raw": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/attachment/{id}/expand/human": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/index/summary": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{issueTypeId}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{issueTypeId}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{issueTypeId}/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/customFieldOption/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/auditing/record": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/auditing/record": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issuetype": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}/alternatives": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}/avatar/temporary": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issuetype/{id}/avatar": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/groupuserpicker": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/group": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/group": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/group/member": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/group/user": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/mypreferences": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/mypreferences": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/workflow": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflow/api/2/transitions/{id}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/workflow/api/2/transitions/{id}/properties": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/workflow/api/2/transitions/{id}/properties": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/avatar/temporary": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/avatar": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/avatar": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/type/{newProjectTypeKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/versions": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/version": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/components": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/avatars": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/statuses": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/reindex/request": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/reindex/request/bulk": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/reindex/request/{requestId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectIdOrKey}/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/issuesecuritylevelscheme": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/applicationrole": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/applicationrole": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/applicationrole/{key}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/applicationrole/{key}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/password/policy": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/password/policy/createUser": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/password/policy/updateUser": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/priority": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/priority/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissionscheme": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissionscheme": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{permissionSchemeId}/attribute/{attributeKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{permissionSchemeId}/attribute/{key}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}/permission": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}/permission": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/permissionscheme/{schemeId}/permission/{permissionId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/comment/{commentId}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/comment/{commentId}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/comment/{commentId}/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/filter": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/filter/favourite": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/defaultShareScope": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/defaultShareScope": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/columns": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/columns": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/permission": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/permission": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/filter/{id}/permission/{permissionId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/filter/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/attachments": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/{id}/relatedIssueCounts": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{id}/unresolvedIssueCount": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{id}/move": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/remotelink": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{versionId}/remotelink": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{versionId}/remotelink": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/{versionId}/remotelink/{globalId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{versionId}/remotelink/{globalId}": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/{id}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/version/{id}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/version/{id}/removeAndSwap": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/version/{id}/mergeto/{moveIssuesTo}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/field": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/field": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/user": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/user": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/user/columns": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/columns": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/user/avatar/temporary": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/user/avatar": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/user/avatar": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/user/avatars": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/search": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/picker": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/assignable/search": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/password": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/user/viewissue/search": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/permission/search": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/assignable/multiProjectSearch": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/application": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/universal_avatar/type/{type}/owner/{owningObjectId}/temp": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/universal_avatar/type/{type}/owner/{owningObjectId}/avatar": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/universal_avatar/type/{type}/owner/{owningObjectId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/monitoring/jmx/getAvailableMetrics": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/monitoring/jmx/areMetricsExposed": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/monitoring/jmx/startExposing": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/monitoring/jmx/stopExposing": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/settings/columns": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/settings/columns": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/settings/baseUrl": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/permissionscheme": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/permissionscheme": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/issue/{issueIdOrKey}/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/project/{projectKeyOrId}/securitylevel": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/myself": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/myself": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/myself/password": {
+                    "put": null
+                }
+            },
+            {
+                "/auth/1/session": {
+                    "get": null
+                }
+            },
+            {
+                "/auth/1/session": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issueLink": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/issueLink/{linkId}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/cancel": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/start": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/approve": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/retryUpgrade": {
+                    "post": null
+                }
+            },
+            {
+                "/api/2/cluster/zdu/state": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/permissions": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/mypermissions": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/properties/": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/user/properties/{propertyKey}": {
+                    "put": null
+                }
+            },
+            {
+                "/api/2/dashboard/{dashboardId}/items/{itemId}/properties": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}": {
+                    "get": null
+                }
+            },
+            {
+                "/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}": {
+                    "put": null
+                }
+            }
+        ]
+    },
+    {
+        "name": "Git Hub 1.1.4",
+        "requests": [
+            {
+                "/search/commits": {
+                    "get": [
+                        {
+                            "query_commit": [
+                                {
+                                    "keywords": [
+                                        {
+                                            "keyword": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "qualifiers": [
+                                        {
+                                            "author": "string"
+                                        },
+                                        {
+                                            "committer": "string"
+                                        },
+                                        {
+                                            "author-name": "string"
+                                        },
+                                        {
+                                            "committer-name": "string"
+                                        },
+                                        {
+                                            "author-email": "string"
+                                        },
+                                        {
+                                            "committer-email": "string"
+                                        },
+                                        {
+                                            "author-date": "string"
+                                        },
+                                        {
+                                            "merge": true
+                                        },
+                                        {
+                                            "hash": "string"
+                                        },
+                                        {
+                                            "parent": "string"
+                                        },
+                                        {
+                                            "tree": "string"
+                                        },
+                                        {
+                                            "user": "string"
+                                        },
+                                        {
+                                            "org": "string"
+                                        },
+                                        {
+                                            "repo": "string"
+                                        },
+                                        {
+                                            "is": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "query_commit": [
+                                {
+                                    "author-date": "string"
+                                },
+                                {
+                                    "committer-date": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "order": "string"
+                        },
+                        {
+                            "per_page": 0
+                        },
+                        {
+                            "page": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "responses": [
+            {
+                "/search/commits": {
+                    "get": {
+                        "": [
+                            {
+                                "total_count": 0
+                            },
+                            {
+                                "incomplete_results": true
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "url": "string"
+                                    },
+                                    {
+                                        "sha": "string"
+                                    },
+                                    {
+                                        "html_url": "string"
+                                    },
+                                    {
+                                        "comments_url": "string"
+                                    },
+                                    {
+                                        "commit": [
+                                            {
+                                                "author": [
+                                                    {
+                                                        "name": "string"
+                                                    },
+                                                    {
+                                                        "email": "string"
+                                                    },
+                                                    {
+                                                        "date": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "committer": [
+                                                    {
+                                                        "name": "string"
+                                                    },
+                                                    {
+                                                        "email": "string"
+                                                    },
+                                                    {
+                                                        "date": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "comment_count": 0
+                                            },
+                                            {
+                                                "message": "string"
+                                            },
+                                            {
+                                                "tree": [
+                                                    {
+                                                        "sha": "string"
+                                                    },
+                                                    {
+                                                        "url": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "url": "string"
+                                            },
+                                            {
+                                                "verification": [
+                                                    {
+                                                        "verified": true
+                                                    },
+                                                    {
+                                                        "reason": "string"
+                                                    },
+                                                    {
+                                                        "payload": "string"
+                                                    },
+                                                    {
+                                                        "signature": "string"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "author": [
+                                            {
+                                                "name": "string"
+                                            },
+                                            {
+                                                "email": "string"
+                                            },
+                                            {
+                                                "login": "string"
+                                            },
+                                            {
+                                                "id": 0
+                                            },
+                                            {
+                                                "node_id": "string"
+                                            },
+                                            {
+                                                "avatar_url": "string"
+                                            },
+                                            {
+                                                "gravatar_id": "string"
+                                            },
+                                            {
+                                                "url": "string"
+                                            },
+                                            {
+                                                "html_url": "string"
+                                            },
+                                            {
+                                                "followers_url": "string"
+                                            },
+                                            {
+                                                "following_url": "string"
+                                            },
+                                            {
+                                                "gists_url": "string"
+                                            },
+                                            {
+                                                "starred_url": "string"
+                                            },
+                                            {
+                                                "subscriptions_url": "string"
+                                            },
+                                            {
+                                                "organizations_url": "string"
+                                            },
+                                            {
+                                                "repos_url": "string"
+                                            },
+                                            {
+                                                "events_url": "string"
+                                            },
+                                            {
+                                                "received_events_url": "string"
+                                            },
+                                            {
+                                                "type": "string"
+                                            },
+                                            {
+                                                "site_admin": true
+                                            },
+                                            {
+                                                "starred_at": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "committer": [
+                                            {
+                                                "name": "string"
+                                            },
+                                            {
+                                                "email": "string"
+                                            },
+                                            {
+                                                "date": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "parents": [
+                                            {
+                                                "url": "string"
+                                            },
+                                            {
+                                                "html_url": "string"
+                                            },
+                                            {
+                                                "sha": "string"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "repository": [
+                                            {
+                                                "id": 0
+                                            },
+                                            {
+                                                "node_id": "string"
+                                            },
+                                            {
+                                                "name": "string"
+                                            },
+                                            {
+                                                "full_name": "string"
+                                            },
+                                            {
+                                                "owner": [
+                                                    {
+                                                        "name": "string"
+                                                    },
+                                                    {
+                                                        "email": "string"
+                                                    },
+                                                    {
+                                                        "login": "string"
+                                                    },
+                                                    {
+                                                        "id": 0
+                                                    },
+                                                    {
+                                                        "node_id": "string"
+                                                    },
+                                                    {
+                                                        "avatar_url": "string"
+                                                    },
+                                                    {
+                                                        "gravatar_id": "string"
+                                                    },
+                                                    {
+                                                        "url": "string"
+                                                    },
+                                                    {
+                                                        "html_url": "string"
+                                                    },
+                                                    {
+                                                        "followers_url": "string"
+                                                    },
+                                                    {
+                                                        "following_url": "string"
+                                                    },
+                                                    {
+                                                        "gists_url": "string"
+                                                    },
+                                                    {
+                                                        "starred_url": "string"
+                                                    },
+                                                    {
+                                                        "subscriptions_url": "string"
+                                                    },
+                                                    {
+                                                        "organizations_url": "string"
+                                                    },
+                                                    {
+                                                        "repos_url": "string"
+                                                    },
+                                                    {
+                                                        "events_url": "string"
+                                                    },
+                                                    {
+                                                        "received_events_url": "string"
+                                                    },
+                                                    {
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "site_admin": true
+                                                    },
+                                                    {
+                                                        "starred_at": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "private": true
+                                            },
+                                            {
+                                                "html_url": "string"
+                                            },
+                                            {
+                                                "description": "string"
+                                            },
+                                            {
+                                                "fork": true
+                                            },
+                                            {
+                                                "url": "string"
+                                            },
+                                            {
+                                                "archive_url": "string"
+                                            },
+                                            {
+                                                "assignees_url": "string"
+                                            },
+                                            {
+                                                "blobs_url": "string"
+                                            },
+                                            {
+                                                "branches_url": "string"
+                                            },
+                                            {
+                                                "collaborators_url": "string"
+                                            },
+                                            {
+                                                "comments_url": "string"
+                                            },
+                                            {
+                                                "commits_url": "string"
+                                            },
+                                            {
+                                                "compare_url": "string"
+                                            },
+                                            {
+                                                "contents_url": "string"
+                                            },
+                                            {
+                                                "contributors_url": "string"
+                                            },
+                                            {
+                                                "deployments_url": "string"
+                                            },
+                                            {
+                                                "downloads_url": "string"
+                                            },
+                                            {
+                                                "events_url": "string"
+                                            },
+                                            {
+                                                "forks_url": "string"
+                                            },
+                                            {
+                                                "git_commits_url": "string"
+                                            },
+                                            {
+                                                "git_refs_url": "string"
+                                            },
+                                            {
+                                                "git_tags_url": "string"
+                                            },
+                                            {
+                                                "git_url": "string"
+                                            },
+                                            {
+                                                "issue_comment_url": "string"
+                                            },
+                                            {
+                                                "issue_events_url": "string"
+                                            },
+                                            {
+                                                "issues_url": "string"
+                                            },
+                                            {
+                                                "keys_url": "string"
+                                            },
+                                            {
+                                                "labels_url": "string"
+                                            },
+                                            {
+                                                "languages_url": "string"
+                                            },
+                                            {
+                                                "merges_url": "string"
+                                            },
+                                            {
+                                                "milestones_url": "string"
+                                            },
+                                            {
+                                                "notifications_url": "string"
+                                            },
+                                            {
+                                                "pulls_url": "string"
+                                            },
+                                            {
+                                                "releases_url": "string"
+                                            },
+                                            {
+                                                "ssh_url": "string"
+                                            },
+                                            {
+                                                "stargazers_url": "string"
+                                            },
+                                            {
+                                                "statuses_url": "string"
+                                            },
+                                            {
+                                                "subscribers_url": "string"
+                                            },
+                                            {
+                                                "subscription_url": "string"
+                                            },
+                                            {
+                                                "tags_url": "string"
+                                            },
+                                            {
+                                                "teams_url": "string"
+                                            },
+                                            {
+                                                "trees_url": "string"
+                                            },
+                                            {
+                                                "clone_url": "string"
+                                            },
+                                            {
+                                                "mirror_url": "string"
+                                            },
+                                            {
+                                                "hooks_url": "string"
+                                            },
+                                            {
+                                                "svn_url": "string"
+                                            },
+                                            {
+                                                "homepage": "string"
+                                            },
+                                            {
+                                                "language": "string"
+                                            },
+                                            {
+                                                "forks_count": 0
+                                            },
+                                            {
+                                                "stargazers_count": 0
+                                            },
+                                            {
+                                                "watchers_count": 0
+                                            },
+                                            {
+                                                "size": 0
+                                            },
+                                            {
+                                                "default_branch": "string"
+                                            },
+                                            {
+                                                "open_issues_count": 0
+                                            },
+                                            {
+                                                "is_template": true
+                                            },
+                                            {
+                                                "topics": [
+                                                    "string"
+                                                ]
+                                            },
+                                            {
+                                                "has_issues": true
+                                            },
+                                            {
+                                                "has_projects": true
+                                            },
+                                            {
+                                                "has_wiki": true
+                                            },
+                                            {
+                                                "has_pages": true
+                                            },
+                                            {
+                                                "has_downloads": true
+                                            },
+                                            {
+                                                "archived": true
+                                            },
+                                            {
+                                                "disabled": true
+                                            },
+                                            {
+                                                "visibility": "string"
+                                            },
+                                            {
+                                                "pushed_at": "string"
+                                            },
+                                            {
+                                                "created_at": "string"
+                                            },
+                                            {
+                                                "updated_at": "string"
+                                            },
+                                            {
+                                                "permissions": [
+                                                    {
+                                                        "admin": true
+                                                    },
+                                                    {
+                                                        "maintain": true
+                                                    },
+                                                    {
+                                                        "push": true
+                                                    },
+                                                    {
+                                                        "triage": true
+                                                    },
+                                                    {
+                                                        "pull": true
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "role_name": "string"
+                                            },
+                                            {
+                                                "temp_clone_token": "string"
+                                            },
+                                            {
+                                                "delete_branch_on_merge": true
+                                            },
+                                            {
+                                                "subscribers_count": 0
+                                            },
+                                            {
+                                                "network_count": 0
+                                            },
+                                            {
+                                                "code_of_conduct": [
+                                                    {
+                                                        "key": "string"
+                                                    },
+                                                    {
+                                                        "name": "string"
+                                                    },
+                                                    {
+                                                        "url": "string"
+                                                    },
+                                                    {
+                                                        "body": "string"
+                                                    },
+                                                    {
+                                                        "html_url": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "license": [
+                                                    {
+                                                        "key": "string"
+                                                    },
+                                                    {
+                                                        "name": "string"
+                                                    },
+                                                    {
+                                                        "spdx_id": "string"
+                                                    },
+                                                    {
+                                                        "url": "string"
+                                                    },
+                                                    {
+                                                        "node_id": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "forks": 0
+                                            },
+                                            {
+                                                "open_issues": 0
+                                            },
+                                            {
+                                                "watchers": 0
+                                            },
+                                            {
+                                                "allow_forking": true
+                                            },
+                                            {
+                                                "web_commit_signoff_required": true
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "score": "number"
+                                    },
+                                    {
+                                        "node_id": "string"
+                                    },
+                                    {
+                                        "text_matches": [
+                                            {
+                                                "object_url": "string"
+                                            },
+                                            {
+                                                "object_type": "string"
+                                            },
+                                            {
+                                                "property": "string"
+                                            },
+                                            {
+                                                "fragment": "string"
+                                            },
+                                            {
+                                                "matches": [
+                                                    {
+                                                        "text": "string"
+                                                    },
+                                                    {
+                                                        "indices": [
+                                                            0
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+]

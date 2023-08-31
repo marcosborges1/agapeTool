@@ -1,0 +1,323 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Dell Custom NF Mirror Tool",
+    "version": "v1.0"
+  },
+  "paths": {
+    "/api/Cfq/Quotes": {
+      "get": {
+        "tags": [
+          "NFMirror"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "quoteNumbers",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/NfMirror/PayloadByQuoteNumber": {
+      "get": {
+        "tags": [
+          "NFMirror"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "quoteNumbers",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/NfMirror/LoadNfMirrorData": {
+      "get": {
+        "tags": [
+          "NFMirror"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "quoteId",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "versionNumber",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "clientdId",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Cfq/QuoteDetails": {
+      "get": {
+        "tags": [
+          "NFMirror"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "quoteNumber",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "customerId",
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "skusColumn",
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/NFDownloadFile/PdfFile": {
+      "get": {
+        "tags": [
+          "NFMirror"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "quoteNumber",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/NfMirror/PayloadDataByJson": {
+      "post": {
+        "tags": [
+          "NFMirror"
+        ],
+        "consumes": [
+          "application/json-patch+json",
+          "application/json",
+          "text/json",
+          "application/*+json",
+          "application/xml",
+          "text/xml",
+          "application/*+xml"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/OrdersListViewModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "FulfillmentItemInformationViewModel": {
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "fulfillmentSkuInformation": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "FulfillmentUnitViewModel": {
+      "type": "object",
+      "properties": {
+        "fulfillmentItemInformation": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FulfillmentItemInformationViewModel"
+          }
+        }
+      }
+    },
+    "ItemViewModel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "associatedItems": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "fullfilmentLocationId": {
+          "type": "string"
+        },
+        "baseSkuNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "ExtendedPropertyViewModel": {
+      "type": "object",
+      "properties": {
+        "fieldKey": {
+          "type": "string"
+        },
+        "fieldValue": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "object"
+        },
+        "extendedProperties": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "valueFrom": {
+          "type": "object"
+        },
+        "extensionData": {
+          "type": "object"
+        }
+      }
+    },
+    "OrderFormViewModel": {
+      "type": "object",
+      "properties": {
+        "fulfillmentUnits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FulfillmentUnitViewModel"
+          }
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ItemViewModel"
+          }
+        },
+        "extendedProperties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ExtendedPropertyViewModel"
+          }
+        }
+      }
+    },
+    "ContactViewModel": {
+      "type": "object",
+      "properties": {
+        "backendCustomerNumber": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ExportFormViewModel": {
+      "type": "object",
+      "properties": {
+        "contact": {
+          "$ref": "#/definitions/ContactViewModel"
+        }
+      }
+    },
+    "OrderGroupViewModel": {
+      "type": "object",
+      "properties": {
+        "orderForm": {
+          "$ref": "#/definitions/OrderFormViewModel"
+        },
+        "internalQuoteId": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "quoteVersionNumber": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "quoteNumber": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "exportForm": {
+          "$ref": "#/definitions/ExportFormViewModel"
+        }
+      }
+    },
+    "OrdersListViewModel": {
+      "type": "object",
+      "properties": {
+        "orderGroup": {
+          "$ref": "#/definitions/OrderGroupViewModel"
+        },
+        "customerClass": {
+          "type": "string"
+        },
+        "showOnlyInfoSkus": {
+          "type": "boolean"
+        },
+        "getHideSLASkuFlag": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "JWT Authorization header using the Bearer scheme. Example: Authorization: Bearer { token }"
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

@@ -1,0 +1,762 @@
+openapi: 3.0.1
+info:
+  title: Dell CFQ Api
+  version: v1.0
+paths:
+  /api/appsettings:
+    get:
+      tags:
+        - AppSettings
+      responses:
+        '200':
+          description: Success
+  /api/Authorization:
+    get:
+      tags:
+        - Authorization
+      parameters:
+        - name: user
+          in: query
+          schema:
+            type: string
+            nullable: true
+      responses:
+        '200':
+          description: Success
+  /api/Email:
+    post:
+      tags:
+        - Email
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/SendEmailRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendEmailRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SendEmailRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/SendEmailRequest'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/SendEmailRequest'
+          application/*+xml:
+            schema:
+              $ref: '#/components/schemas/SendEmailRequest'
+      responses:
+        '200':
+          description: Success
+  /api/v2/Email:
+    post:
+      tags:
+        - EmailV2
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/SendEmailV2Request'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SendEmailV2Request'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SendEmailV2Request'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/SendEmailV2Request'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/SendEmailV2Request'
+          application/*+xml:
+            schema:
+              $ref: '#/components/schemas/SendEmailV2Request'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /api/v2/Email/SendEmailXML:
+    post:
+      tags:
+        - EmailV2
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              type: string
+              nullable: true
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /api/Invoice:
+    get:
+      tags:
+        - Invoice
+      parameters:
+        - name: quoteNumber
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: customerId
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: docFormat
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: buid
+          in: query
+          schema:
+            type: string
+            nullable: true
+      responses:
+        '200':
+          description: Success
+  /api/Orders:
+    get:
+      tags:
+        - Orders
+      parameters:
+        - name: buid
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: orderNumbers
+          in: query
+          schema:
+            type: string
+            nullable: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataOrder'
+  /api/Quotes:
+    get:
+      tags:
+        - Quotes
+      parameters:
+        - name: buid
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: quoteNumbers
+          in: query
+          schema:
+            type: string
+            nullable: true
+      responses:
+        '200':
+          description: 
+            Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataQuote'
+  /api/Template:
+    get:
+      tags:
+        - Template
+      parameters:
+        - name: buid
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: quoteNumbers
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: customerId
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: language
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: taxes
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: salesName
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: salesEmail
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: skusColumn
+          in: query
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Success
+  /api/Template/OrderTemplate:
+    get:
+      tags:
+        - Template
+      parameters:
+        - name: buid
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: orderNumbers
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: language
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: skusColumn
+          in: query
+          schema:
+            type: boolean
+        - name: salesName
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: salesEmail
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: salesPhone
+          in: query
+          schema:
+            type: string
+            nullable: true
+      responses:
+        '200':
+          description: Success
+  /api/Template/DPID:
+    post:
+      tags:
+        - Template
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/RequestTemplate'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestTemplate'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/RequestTemplate'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/RequestTemplate'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/RequestTemplate'
+          application/*+xml:
+            schema:
+              $ref: '#/components/schemas/RequestTemplate'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            text/xml:
+              schema:
+                type: string
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+  /api/Template/USPDynamicSupportUrl:
+    get:
+      tags:
+        - Template
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/json:
+              schema:
+                type: string
+            text/json:
+              schema:
+                type: string
+            application/xml:
+              schema:
+                type: string
+            text/xml:
+              schema:
+                type: string
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ProblemDetails'
+components:
+  schemas:
+    SendEmailRequest:
+      type: object
+      properties:
+        buid:
+          type: string
+          nullable: true
+          readOnly: true
+        taxes:
+          type: string
+          nullable: true
+          readOnly: true
+        message:
+          type: string
+          nullable: true
+          readOnly: true
+        language:
+          type: string
+          nullable: true
+          readOnly: true
+        messageFormat:
+          type: string
+          nullable: true
+          readOnly: true
+        nfMirrorFormat:
+          type: string
+          nullable: true
+          readOnly: true
+        skusColumn:
+          type: boolean
+          readOnly: true
+        attachments:
+          type: boolean
+          readOnly: true
+        emailList:
+          type: array
+          items:
+            type: string
+          nullable: true
+          readOnly: true
+        quoteOrderNumbers:
+          type: array
+          items:
+            type: string
+          nullable: true
+          readOnly: true
+        salesName:
+          type: string
+          nullable: true
+          readOnly: true
+        salesEmail:
+          type: string
+          nullable: true
+          readOnly: true
+        proforma:
+          type: boolean
+          readOnly: true
+        isOrderRequest:
+          type: boolean
+          readOnly: true
+        salesPhone:
+          type: string
+          nullable: true
+          readOnly: true
+        contentType:
+          type: string
+          nullable: true
+          readOnly: true
+    EmailType:
+      enum:
+        - Basket
+        - BankOrderConfirmation
+        - BankAposOrderConfirmation
+        - AposOrderConfirmation
+        - AposOrderAcknowledgment
+        - OrderConfirmation
+        - OrderAcknowledgment
+        - OrderCancel
+        - Quote
+        - Order
+        - QuoteMultiple
+        - BankQuote
+        - BankAposQuote
+        - AposQuote
+        - AsapQuote
+        - None
+      type: string
+    LatamLanguage:
+      enum:
+        - English
+        - Spanish
+        - Portuguese
+      type: string
+    MessageFormatType:
+      enum:
+        - Html
+        - Pdf
+      type: string
+    Sender:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        emailAddress:
+          type: string
+          nullable: true
+    SendEmailV2Request:
+      type: object
+      properties:
+        buid:
+          type: string
+          nullable: true
+        taxes:
+          type: string
+          nullable: true
+        nfMirrorFormat:
+          type: string
+          nullable: true
+        skusColumn:
+          type: boolean
+        attachments:
+          type: boolean
+        quoteOrderNumbers:
+          type: array
+          items:
+            type: string
+          nullable: true
+        salesName:
+          type: string
+          nullable: true
+        salesEmail:
+          type: string
+          nullable: true
+        proforma:
+          type: boolean
+        isOrderRequest:
+          type: boolean
+        salesPhone:
+          type: string
+          nullable: true
+        emailList:
+          type: array
+          items:
+            type: string
+          nullable: true
+        payload:
+          type: string
+          nullable: true
+        emailType:
+          $ref: '#/components/schemas/EmailType'
+        message:
+          type: string
+          nullable: true
+        language:
+          $ref: '#/components/schemas/LatamLanguage'
+        contentType:
+          $ref: '#/components/schemas/MessageFormatType'
+        sender:
+          $ref: '#/components/schemas/Sender'
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    RequestTemplate:
+      type: object
+      properties:
+        payload:
+          type: string
+          nullable: true
+        emailType:
+          $ref: '#/components/schemas/EmailType'
+        message:
+          type: string
+          nullable: true
+        language:
+          $ref: '#/components/schemas/LatamLanguage'
+        contentType:
+          $ref: '#/components/schemas/MessageFormatType'
+        sender:
+          $ref: '#/components/schemas/Sender'
+    DataQuote:
+      type: object
+      properties:
+        buid:
+          type: string
+        quoteId: 
+          type: string
+        currency: 
+          type: string
+        totalPrice: 
+          type: string
+        customerId: 
+          type: string
+        customerName:
+          type: string
+        nfMirrorDocId: 
+          type: string
+        validBUID:
+          type: boolean
+        itemsDescription:
+          type: array
+          items:
+            type: string
+        nfMirrorFlag:
+          type: boolean
+        expiredQuote:
+          type: boolean
+        proformaFlag:
+          type: boolean
+        items:
+          $ref: '#/components/schemas/Items'
+    DataOrder:
+      type: object
+      properties:
+        buid:
+          type: string
+        orderId: 
+          type: string
+        customerId: 
+          type: string
+        customerName:
+          type: string
+        searchBy: 
+          type: string
+        searchValue: 
+          type: string
+        validBUID: 
+          type: boolean
+        itemsDescription:
+          type: array
+          items:
+            type: string
+        totalPrice:
+          type: string
+        items:
+          $ref: '#/components/schemas/ItemsDataOrder'
+        skuItems:
+          type: array
+          items:
+            type: string
+        orderSummarySubTotal:
+          type: string
+        orderSummaryTaxTotal:
+          type: string
+        orderSummaryDuty:
+          type: string
+        orderSummaryShipTotal:
+          type: string
+        orderSummaryTotalNet:
+          type: string
+        orderSummaryTotal:
+          type: string
+        orderSummaryTaxDetailsAmountICMS:
+          type: string
+        orderSummaryTaxDetailsTotalIPIamount:
+          type: string
+        orderSummaryBusinessUnitId:
+          type: string
+        orderSummaryCompanyNumber:
+          type: string
+        orderSummaryOrderDate:
+          type: string
+        orderSummaryCancelDate:
+          type: string
+        orderSummaryOrderStatus:
+          type: string
+        orderSummaryCheckDigit:
+          type: string
+        orderSummaryOrderNum:
+          type: string
+        taxCategory:
+          type: string
+        cfi:
+          type: string
+        domsNumber:
+          type: string
+        orderStatus:
+          type: string
+        orderSubtotal:
+          type: string
+        orderShipTotal:
+          type: string
+        orderTaxTotal:
+          type: string
+        orderDutyAmount:
+          type: string
+        orderTotal:
+          type: string
+        orderDesc:
+          type: string
+        selectedEDD:
+          type: string
+        selectedDeliveryShift:
+          type: string
+        shipByDate:
+          type: string
+        calcualtedSubTotalPrice:
+          type: string
+    Items:
+      type: object
+      properties:
+        itemId:
+          type: string
+        itemDescription:
+          type: string
+    ItemsDataOrder:
+      type: object
+      properties:
+        id:
+          type: string
+        itemId: 
+          type: string
+        itemDescription: 
+          type: string
+        itemSummarySubTotal: 
+          type: string
+        itemSummaryTaxTotal: 
+          type: string
+        itemSummaryDuty: 
+          type: string
+        cfi: 
+          type: string
+        itemSummaryDsicountTotal: 
+          type: string
+        itemSummaryTotal: 
+          type: string
+        itemSummaryShipTotal: 
+          type: string
+        itemSummaryTotalNet:
+          type: string
+        itemSummarySubTotalWithShipping: 
+          type: string
+        itemSummarySubTotalWithDutyAndShipping: 
+          type: string
+        configDescription: 
+          type: string
+        orderProductName: 
+          type: string
+        modules: 
+          type: string
+        skus:
+          type: string
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: 'JWT Authorization header using the Bearer scheme. Example: "Authorization: Bearer {token}"'
+      name: Authorization
+      in: header
+security:
+  - Bearer: []

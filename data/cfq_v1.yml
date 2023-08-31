@@ -1,0 +1,274 @@
+openapi: 3.0.1
+info:
+  title: Dell CFQ Api
+  version: v1.0
+paths:
+ /api/Quotes:
+    get:
+      tags:
+        - Quotes
+      parameters:
+        - name: buid
+          in: query
+          schema:
+            type: string
+            nullable: true
+        - name: quoteNumbers
+          in: query
+          schema:
+            type: string
+            nullable: true
+      responses:
+        '200':
+          description: 
+            ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataQuote'
+components:
+  schemas:
+    SendEmailRequest:
+      type: object
+      properties:
+        buid:
+          type: string
+          nullable: true
+          readOnly: true
+        taxes:
+          type: string
+          nullable: true
+          readOnly: true
+        message:
+          type: string
+          nullable: true
+          readOnly: true
+        language:
+          type: string
+          nullable: true
+          readOnly: true
+        messageFormat:
+          type: string
+          nullable: true
+          readOnly: true
+        nfMirrorFormat:
+          type: string
+          nullable: true
+          readOnly: true
+        skusColumn:
+          type: boolean
+          readOnly: true
+        attachments:
+          type: boolean
+          readOnly: true
+        emailList:
+          type: array
+          items:
+            type: string
+          nullable: true
+          readOnly: true
+        quoteOrderNumbers:
+          type: array
+          items:
+            type: string
+          nullable: true
+          readOnly: true
+        salesName:
+          type: string
+          nullable: true
+          readOnly: true
+        salesEmail:
+          type: string
+          nullable: true
+          readOnly: true
+        proforma:
+          type: boolean
+          readOnly: true
+        isOrderRequest:
+          type: boolean
+          readOnly: true
+        salesPhone:
+          type: string
+          nullable: true
+          readOnly: true
+        contentType:
+          type: string
+          nullable: true
+          readOnly: true
+    EmailType:
+      enum:
+        - Basket
+        - BankOrderConfirmation
+        - BankAposOrderConfirmation
+        - AposOrderConfirmation
+        - AposOrderAcknowledgment
+        - OrderConfirmation
+        - OrderAcknowledgment
+        - OrderCancel
+        - Quote
+        - Order
+        - QuoteMultiple
+        - BankQuote
+        - BankAposQuote
+        - AposQuote
+        - AsapQuote
+        - None
+      type: string
+    LatamLanguage:
+      enum:
+        - English
+        - Spanish
+        - Portuguese
+      type: string
+    MessageFormatType:
+      enum:
+        - Html
+        - Pdf
+      type: string
+    Sender:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        emailAddress:
+          type: string
+          nullable: true
+    SendEmailV2Request:
+      type: object
+      properties:
+        buid:
+          type: string
+          nullable: true
+        taxes:
+          type: string
+          nullable: true
+        nfMirrorFormat:
+          type: string
+          nullable: true
+        skusColumn:
+          type: boolean
+        attachments:
+          type: boolean
+        quoteOrderNumbers:
+          type: array
+          items:
+            type: string
+          nullable: true
+        salesName:
+          type: string
+          nullable: true
+        salesEmail:
+          type: string
+          nullable: true
+        proforma:
+          type: boolean
+        isOrderRequest:
+          type: boolean
+        salesPhone:
+          type: string
+          nullable: true
+        emailList:
+          type: array
+          items:
+            type: string
+          nullable: true
+        payload:
+          type: string
+          nullable: true
+        emailType:
+          $ref: '#/components/schemas/EmailType'
+        message:
+          type: string
+          nullable: true
+        language:
+          $ref: '#/components/schemas/LatamLanguage'
+        contentType:
+          $ref: '#/components/schemas/MessageFormatType'
+        sender:
+          $ref: '#/components/schemas/Sender'
+    ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    RequestTemplate:
+      type: object
+      properties:
+        payload:
+          type: string
+          nullable: true
+        emailType:
+          $ref: '#/components/schemas/EmailType'
+        message:
+          type: string
+          nullable: true
+        language:
+          $ref: '#/components/schemas/LatamLanguage'
+        contentType:
+          $ref: '#/components/schemas/MessageFormatType'
+        sender:
+          $ref: '#/components/schemas/Sender'
+    DataQuote:
+      type: object
+      properties:
+        buid:
+          type: string
+        quoteId: 
+          type: string
+        currency: 
+          type: string
+        totalPrice: 
+          type: string
+        customerId: 
+          type: string
+        customerName:
+          type: string
+        nfMirrorDocId: 
+          type: string
+        validBUID:
+          type: boolean
+        itemsDescription:
+          type: array
+          items:
+            type: string
+        nfMirrorFlag:
+          type: boolean
+        expiredQuote:
+          type: boolean
+        proformaFlag:
+          type: boolean
+        items:
+          $ref: '#/components/schemas/Items'
+    Items:
+      type: object
+      properties:
+        itemId:
+          type: string
+        itemDescription:
+          type: string
+    
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: 'JWT Authorization header using the Bearer scheme. Example: "Authorization: Bearer {token}"'
+      name: Authorization
+      in: header
+security:
+  - Bearer: []

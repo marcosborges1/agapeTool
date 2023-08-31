@@ -1,0 +1,795 @@
+[
+    {
+        "name": "NF Mirror v1.0",
+        "requests": [
+            {
+                "/api/DownloadAttachment/attachment": {
+                    "post": {
+                        "NfMirrorAttachmentParametersDto": [
+                            {
+                                "document": "string"
+                            },
+                            {
+                                "nfFormat": "string"
+                            },
+                            {
+                                "documentId": "string"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "/api/DownloadAttachment/attachment": {
+                    "post": {
+                        "NfMirrorAttachmentParametersDto": [
+                            {
+                                "document": "string"
+                            },
+                            {
+                                "nfFormat": "string"
+                            },
+                            {
+                                "documentId": "string"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "/api/Diagnostics/TestAllEndpoints": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestQuoteServiceURL": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestSynchroServiceUrl": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestCfoServiceUrl": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestDomsQuoteInfoService": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Info": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadData/GetData": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadData/GetDataArray": {
+                    "get": [
+                        {
+                            "quoteNumbers": [
+                                "string"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/NFDownloadData/GetPdfData": {
+                    "get": [
+                        {
+                            "quoteNumber": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/NFDownloadFile/pdfFile": {
+                    "get": [
+                        {
+                            "quoteNumber": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/NFDownloadFile/GetPdfData": {
+                    "get": [
+                        {
+                            "quoteNumber": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/NFDownloadFile/GetQuoteData": {
+                    "get": [
+                        {
+                            "quoteNumbers": [
+                                "string"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/NFDownloadFile/GetXmlData": {
+                    "get": [
+                        {
+                            "quoteNumber": "string"
+                        }
+                    ]
+                }
+            },
+            {
+                "/api/NFMirror/payloaddata": {
+                    "post": {
+                        "Payload": [
+                            {
+                                "OrderGroup": [
+                                    {
+                                        "OrderForm": [
+                                            {
+                                                "FulfillmentUnits": [
+                                                    {
+                                                        "FulfillmentItemInformation": [
+                                                            "string"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "Items": [
+                                                    "string"
+                                                ]
+                                            },
+                                            {
+                                                "ExtendedProperties": [
+                                                    "string"
+                                                ]
+                                            },
+                                            {
+                                                "InternalQuoteId": "string"
+                                            },
+                                            {
+                                                "QuoteVersionNumber": "string"
+                                            },
+                                            {
+                                                "ExportForm": [
+                                                    {
+                                                        "Contact": [
+                                                            {
+                                                                "BackendCustomerNumber": "string"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "/api/NFMirror/payloaddata": {
+                    "post": {
+                        "Payload": [
+                            {
+                                "OrderGroup": [
+                                    {
+                                        "OrderForm": [
+                                            {
+                                                "FulfillmentUnits": [
+                                                    {
+                                                        "FulfillmentItemInformation": [
+                                                            "string"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "Items": [
+                                                    "string"
+                                                ]
+                                            },
+                                            {
+                                                "ExtendedProperties": [
+                                                    "string"
+                                                ]
+                                            },
+                                            {
+                                                "InternalQuoteId": "string"
+                                            },
+                                            {
+                                                "QuoteVersionNumber": "string"
+                                            },
+                                            {
+                                                "ExportForm": [
+                                                    {
+                                                        "Contact": [
+                                                            {
+                                                                "BackendCustomerNumber": "string"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "/api/NFMirror/nfmirriorsdoms": {
+                    "post": null
+                }
+            },
+            {
+                "/api/NFMirror/payloaddoms": {
+                    "post": null
+                }
+            }
+        ],
+        "responses": [
+            {
+                "/api/DownloadAttachment/attachment": {
+                    "post": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestAllEndpoints": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestQuoteServiceURL": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestSynchroServiceUrl": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestCfoServiceUrl": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Diagnostics/TestDomsQuoteInfoService": {
+                    "get": null
+                }
+            },
+            {
+                "/api/Info": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadData/GetData": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadData/GetDataArray": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadData/GetPdfData": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadFile/pdfFile": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadFile/GetPdfData": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadFile/GetQuoteData": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFDownloadFile/GetXmlData": {
+                    "get": null
+                }
+            },
+            {
+                "/api/NFMirror/payloaddata": {
+                    "post": {
+                        "NfMirriors": [
+                            {
+                                "NFMirrorData": [
+                                    {
+                                        "ProductsTotalValue": [
+                                            "string"
+                                        ]
+                                    },
+                                    {
+                                        "BaseICMS": "string"
+                                    },
+                                    {
+                                        "BaseICMSSubstSubstitution": "string"
+                                    },
+                                    {
+                                        "DocumentTotalValue": "string"
+                                    },
+                                    {
+                                        "FreightValue": "string"
+                                    },
+                                    {
+                                        "HedgeValue": "string"
+                                    },
+                                    {
+                                        "StateTaxID": "string"
+                                    },
+                                    {
+                                        "ICMSSubstitutionValue": "string"
+                                    },
+                                    {
+                                        "ICMSValue": "string"
+                                    },
+                                    {
+                                        "IPITotalValue": "string"
+                                    },
+                                    {
+                                        "DofSequence": "string"
+                                    },
+                                    {
+                                        "ProductsWithTaxes": "string"
+                                    },
+                                    {
+                                        "FullFillMentLocationCode": "string"
+                                    },
+                                    {
+                                        "ProductsWithTaxesICMSSTValue": "string"
+                                    },
+                                    {
+                                        "NFCreationDate": "string"
+                                    },
+                                    {
+                                        "BrazilInvoiceLocation": "string"
+                                    },
+                                    {
+                                        "ProductsInformation": [
+                                            {
+                                                "Header": [
+                                                    {
+                                                        "Operation": [
+                                                            {
+                                                                "CFOPCodigo": "string"
+                                                            },
+                                                            {
+                                                                "Description": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "Customer": [
+                                                            {
+                                                                "CpfCpnj": "string"
+                                                            },
+                                                            {
+                                                                "RazaoSocial": "string"
+                                                            },
+                                                            {
+                                                                "Inscription": "string"
+                                                            },
+                                                            {
+                                                                "InscricaoMunicipal": "string"
+                                                            },
+                                                            {
+                                                                "Address": [
+                                                                    {
+                                                                        "County": "string"
+                                                                    },
+                                                                    {
+                                                                        "PostCode": "string"
+                                                                    },
+                                                                    {
+                                                                        "State": "string"
+                                                                    },
+                                                                    {
+                                                                        "Telephone": "string"
+                                                                    },
+                                                                    {
+                                                                        "City": "string"
+                                                                    },
+                                                                    {
+                                                                        "Street": "string"
+                                                                    },
+                                                                    {
+                                                                        "Bairro": "string"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "Products": [
+                                                    {
+                                                        "ProductId": "string"
+                                                    },
+                                                    {
+                                                        "Product": [
+                                                            {
+                                                                "Code": "string"
+                                                            },
+                                                            {
+                                                                "ICMSAliquota": "string"
+                                                            },
+                                                            {
+                                                                "IPIAliquota": "string"
+                                                            },
+                                                            {
+                                                                "IPIValue": "string"
+                                                            },
+                                                            {
+                                                                "Name": "string"
+                                                            },
+                                                            {
+                                                                "NBMCode": "string"
+                                                            },
+                                                            {
+                                                                "OMCode": "string"
+                                                            },
+                                                            {
+                                                                "Quantity": "string"
+                                                            },
+                                                            {
+                                                                "STCCode": "string"
+                                                            },
+                                                            {
+                                                                "Unit": "string"
+                                                            },
+                                                            {
+                                                                "UnitPrice": "string"
+                                                            },
+                                                            {
+                                                                "TotalPrice": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "Messages": [
+                                                            {
+                                                                "Message": [
+                                                                    {
+                                                                        "string": "string"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "NFSeInformation": [
+                                            {
+                                                "Header": [
+                                                    {
+                                                        "Prestador": [
+                                                            {
+                                                                "RazaoSocial": "string"
+                                                            },
+                                                            {
+                                                                "Endereco": "string"
+                                                            },
+                                                            {
+                                                                "Cidade": "string"
+                                                            },
+                                                            {
+                                                                "CpfCnpj": "string"
+                                                            },
+                                                            {
+                                                                "InscricaoEstaduaol": "string"
+                                                            },
+                                                            {
+                                                                "DellStateId": "string"
+                                                            },
+                                                            {
+                                                                "InscricaoMunicipal": "string"
+                                                            },
+                                                            {
+                                                                "NomeFantasia": "string"
+                                                            },
+                                                            {
+                                                                "UF": "string"
+                                                            },
+                                                            {
+                                                                "Email": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "Tomador": [
+                                                            {
+                                                                "RazaoSocial": "string"
+                                                            },
+                                                            {
+                                                                "Endereco": "string"
+                                                            },
+                                                            {
+                                                                "Cidade": "string"
+                                                            },
+                                                            {
+                                                                "UF": "string"
+                                                            },
+                                                            {
+                                                                "Fone": "string"
+                                                            },
+                                                            {
+                                                                "CEP": "string"
+                                                            },
+                                                            {
+                                                                "Bairro": "string"
+                                                            },
+                                                            {
+                                                                "CPFCNPJ": "string"
+                                                            },
+                                                            {
+                                                                "InscricaoEstadual": "string"
+                                                            },
+                                                            {
+                                                                "Email": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "InfoMunicipio": [
+                                                            {
+                                                                "Municipio": "string"
+                                                            },
+                                                            {
+                                                                "Secretaria": "string"
+                                                            },
+                                                            {
+                                                                "Informacoes": "string"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "NaturezaOperacao": "string"
+                                                    },
+                                                    {
+                                                        "TributadoNoMunicipio": "string"
+                                                    },
+                                                    {
+                                                        "MunicioDePrestacaoDoServico": "string"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "Services": [
+                                                    {
+                                                        "ServiceId": "string"
+                                                    },
+                                                    {
+                                                        "Service": [
+                                                            {
+                                                                "CodigoServico": "string"
+                                                            },
+                                                            {
+                                                                "Code": "string"
+                                                            },
+                                                            {
+                                                                "Descricao": "string"
+                                                            },
+                                                            {
+                                                                "ValorServicos": "string"
+                                                            },
+                                                            {
+                                                                "TotalPrice": "string"
+                                                            },
+                                                            {
+                                                                "Quantity": "string"
+                                                            },
+                                                            {
+                                                                "ValorDeducoes": "string"
+                                                            },
+                                                            {
+                                                                "ValorPis": "string"
+                                                            },
+                                                            {
+                                                                "ValorCofins": "string"
+                                                            },
+                                                            {
+                                                                "ValorInss": "string"
+                                                            },
+                                                            {
+                                                                "ValorIR": "string"
+                                                            },
+                                                            {
+                                                                "ValorCsll": "string"
+                                                            },
+                                                            {
+                                                                "CodigoCnae": "string"
+                                                            },
+                                                            {
+                                                                "IssRetido": "string"
+                                                            },
+                                                            {
+                                                                "ValorISS": "string"
+                                                            },
+                                                            {
+                                                                "BaseCalculo": "string"
+                                                            },
+                                                            {
+                                                                "ValorLiquidoNFSe": "string"
+                                                            },
+                                                            {
+                                                                "AliquotaServicos": "string"
+                                                            },
+                                                            {
+                                                                "AliquotaISS": "string"
+                                                            },
+                                                            {
+                                                                "AliquotaPIS": "string"
+                                                            },
+                                                            {
+                                                                "AliquotaCOFINS": "string"
+                                                            },
+                                                            {
+                                                                "AliquotaINSS": "string"
+                                                            },
+                                                            {
+                                                                "AliquotaIR": "string"
+                                                            },
+                                                            {
+                                                                "AliquotaCSLL": "string"
+                                                            },
+                                                            {
+                                                                "InformacoesAdicionais": "string"
+                                                            },
+                                                            {
+                                                                "DiscriminacaoAux": "string"
+                                                            },
+                                                            {
+                                                                "DescricaoList": [
+                                                                    {
+                                                                        "Descricao0": [
+                                                                            {
+                                                                                "string": "string"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "Descricao1": [
+                                                                            {
+                                                                                "string": "string"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "TotalTotalPrice": "string"
+                                    },
+                                    {
+                                        "QuoteNum": "string"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "/api/NFMirror/nfmirriorsdoms": {
+                    "post": null
+                }
+            },
+            {
+                "/api/NFMirror/payloaddoms": {
+                    "post": null
+                }
+            }
+        ]
+    },
+    {
+        "name": "CFQ v1.0",
+        "requests": [
+            {
+                "/api/Quotes": {
+                    "get": [
+                        {
+                            "buid": "string"
+                        },
+                        {
+                            "quoteNumbers": "string"
+                        }
+                    ]
+                }
+            }
+        ],
+        "responses": [
+            {
+                "/api/Quotes": {
+                    "get": {
+                        "DataQuote": [
+                            {
+                                "buid": "string"
+                            },
+                            {
+                                "quoteId": "string"
+                            },
+                            {
+                                "currency": "string"
+                            },
+                            {
+                                "totalPrice": "string"
+                            },
+                            {
+                                "customerId": "string"
+                            },
+                            {
+                                "customerName": "string"
+                            },
+                            {
+                                "nfMirrorDocId": "string"
+                            },
+                            {
+                                "validBUID": true
+                            },
+                            {
+                                "itemsDescription": [
+                                    "string"
+                                ]
+                            },
+                            {
+                                "nfMirrorFlag": true
+                            },
+                            {
+                                "expiredQuote": true
+                            },
+                            {
+                                "proformaFlag": true
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "itemId": "string"
+                                    },
+                                    {
+                                        "itemDescription": "string"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+]
