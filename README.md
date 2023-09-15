@@ -56,14 +56,6 @@ server.listen(process.env.PORT).then(({ url }) => {
 
 **Note**: The default PORT is _4001_, but can be change for your convenience.
 
-## Project Status
-
-As it is a proof of concept, it is in a phase of improvement and evolution.
-
-## Author
-
-Marcos Borges
-
 ## References
 
 - **_Agape Approach paper is still been validated_**: As the Agape approach undergoes validation in conferences and journals, further updates will be shared here. Once validated, a link to the respective paper will be made available in this section.
