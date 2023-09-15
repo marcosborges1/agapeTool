@@ -18,6 +18,7 @@
     "@apollo/subgraph": "^0.1.5",
     "apollo-server": "^3.6.1",
     "apollo-server-core": "^3.6.1",
+    "dotenv": "^16.3.1",
     "flat": "^5.0.2",
     "fs": "^0.0.1-security",
     "nodemon": "^2.0.15",
