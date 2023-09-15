@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { ApolloServer } = require("apollo-server");
 const {
 	ApolloServerPluginLandingPageGraphQLPlayground,
@@ -7,6 +8,7 @@ const { buildSubgraphSchema } = require("@apollo/subgraph");
 const typeDefs = require("./graphql/schemas");
 const resolvers = require("./graphql/resolvers");
 
+
 const server = new ApolloServer({
 	cors: true,
 	typeDefs,
@@ -15,6 +17,6 @@ const server = new ApolloServer({
 	plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
 });
 
-server.listen(4001).then(({ url }) => {
+server.listen(process.env.PORT).then(({ url }) => {
 	console.log(`Server ready at ${url}`);
 });
