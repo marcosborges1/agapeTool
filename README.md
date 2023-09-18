@@ -6,15 +6,15 @@ The API Syntactic Extractor Service (ASE) is a software implementation of the AS
 
 The ASE service's primary role is to validate 3 API contracts and meticulously extract key information from description files adhering to OpenAPI standards. Adhering to the guidelines set by the ASE algorithm, the service efficiently captures the specifics of each API—paths, components, definitions, endpoints, methods, fields, and both input and output parameters. These are then organized into a clear JSON format, segmented by API names, requests, and responses.
 
-## Implementation Details
-
-Constructed using JavaScript, the ASE service is a lightweight, dynamic, and web-compatible solution. The choice of language complements the ASE algorithm's versatility and caters to the overarching requirements of the System of Systems context, as described within the Agape approach.
-
 ## Algorithm
 
 The ASE's core is based on the algorithm described below.
 
 <img src="/images/ase_algorithm.png" height="300"/>
+
+## Implementation Details
+
+Constructed using JavaScript, the ASE service is a lightweight, dynamic, and web-compatible solution. The choice of language complements the ASE algorithm's versatility and caters to the overarching requirements of the System of Systems context, as described within the Agape approach.
 
 ## Setup
 
