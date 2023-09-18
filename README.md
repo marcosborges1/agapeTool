@@ -10,16 +10,6 @@ The ASE service's primary role is to validate 3 API contracts and meticulously e
 
 Constructed using JavaScript, the ASE service is a lightweight, dynamic, and web-compatible solution. The choice of language complements the ASE algorithm's versatility and caters to the overarching requirements of the System of Systems context, as described within the Agape approach.
 
-## Project Status
-
-Currently, the ASE serves as a proof of concept and is in an active phase of enhancement and evolution. Feedback and real-world applications are vital at this stage to refine its capabilities and to better align it with users' needs.
-
-## Author
-
-**Marcos Borges**  
-PhD Student at Federal University of Ceará, Brazil  
-Email: [marcos.borges@alu.ufc.br](mailto:marcos.borges@alu.ufc.br)
-
 ## Algorithm
 
 The ASE's core is based on the algorithm described below.
@@ -28,7 +18,7 @@ The ASE's core is based on the algorithm described below.
 
 ## Setup
 
-Use the package manager [npm](https://www.npmjs.com) to install micrographlgateway.
+Use the package manager [npm](https://www.npmjs.com) to install the ASE.
 
 ```bash
 npm install
@@ -36,29 +26,36 @@ npm install
 
 ## Usage
 
-Before you start registering the microservices below, be sure to start them.
+Before you start the ASE, be sure to start it.
 
-```javascript
-//Ommited Details
-const server = new ApolloServer({
-  cors: true,
-  typeDefs,
-  resolvers,
-  schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
-  plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
-});
-
-server.listen(process.env.PORT).then(({ url }) => {
-  console.log(`Server ready at ${url}`);
-});
-//Ommited Details
+```bash
+npm start
 ```
 
-**Note**: The default PORT is _4001_, but can be change for your convenience.
+Access the ASE from the GraphQL endpoint:
+
+```bash
+http://localhost:4001/graphql
+```
+
+**Note**:
+
+- The default PORT is _4001_, but can be change for your convenience.
+- This project heavily relies on GraphQL, a powerful query language for APIs, and a server-side runtime for executing those queries with your existing data. If you're unfamiliar with GraphQL or wish to dive deeper, you can [learn more about GraphQL here](https://graphql.org/).
 
 ## References
 
-- **_Agape Approach paper is still been validated_**: As the Agape approach undergoes validation in conferences and journals, further updates will be shared here. Once validated, a link to the respective paper will be made available in this section.
+- **Agape Approach**: As the Agape approach is being validated through conferences and journals, updates will be periodically provided here. Once the validation process concludes and findings are published, a direct link to the paper will be shared in this section for easy accessibility.
+
+## Project Status
+
+The ASE, currently in the evolutionary phase, functions as a proof of concept. It is actively undergoing improvements and changes to refine its capabilities and more effectively meet new requirements.
+
+## Author
+
+**Marcos Borges**  
+PhD Student at Federal University of Ceará, Brazil  
+Email: [marcos.borges@alu.ufc.br](mailto:marcos.borges@alu.ufc.br)
 
 ## Contributing
 
@@ -69,55 +66,3 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-<!-- # MicroGraphQL - Api Similarity Analyzer Service
-
-API Similarity Analyzer Service (ASAS) is a microservice that will analyze the similarities of requests and responses contained in OpenAPI description files.
-
-<img src="https://github.com/marcosborges1/api-similarity-analyzer-service/blob/main/images/api_similarity.png" height="300"/>
-
-## Note - Project Status
-
-As it is a proof of concept, it is in a phase of improvement and evolution.
-
-## Author
-
-Marcos Borges
-
-## Installation
-
-Use the package manager [npm](https://www.npmjs.com) to install micrographlgateway.
-
-```bash
-npm install
-```
-
-## Usage
-
-Before you start registering the microservices below, be sure to start them.
-
-```javascript
-//Ommited Details
-const server = new ApolloServer({
-	cors: true,
-	typeDefs,
-	resolvers,
-	schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
-	plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
-});
-
-server.listen(4001).then(({ url }) => {
-	console.log(`Server ready at ${url}`);
-});
-//Ommited Details
-```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/) -->
