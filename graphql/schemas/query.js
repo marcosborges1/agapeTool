@@ -1,35 +1,18 @@
-const { gql } = require("apollo-server");
+import gql from 'graphql-tag';
 
 const querySchema = gql`
 	scalar JSON
-	type Report {
-		requests: JSON
-		responses: JSON
-		similarities: [Similarities]
-	}
-	type Similarities {
-		originAPI: API
-		targetAPI: API
-	}
-	type API {
-		url: String
-		method: String
-		parametersIn: JSON
-		parametersOut: JSON
-	}
 	input inputAPI {
 		name: String
 		path: String
 	}
 	type Query {
-		getSimilaritiesFromAPIs(dataAPI: [inputAPI]): Report!
 		getExtractedApiList(apiList: [inputAPI]): exApiList
-		getTestEndpoints(dataAPI: [inputAPI]): JSON
 	}
 
-	type exApiList {
+	type exApiList @key(fields: "generatedExtractedFile") {
 		extractedApiList: [extractedApi]
-		fileGenerated: String
+		generatedExtractedFile: String
 	}
 
 	type extractedApi {
@@ -39,4 +22,4 @@ const querySchema = gql`
 	}
 `;
 
-module.exports = querySchema;
+export default querySchema;

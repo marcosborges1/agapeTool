@@ -1,41 +1,29 @@
-require('dotenv').config();
-const express = require('express');
-const { ApolloServer } = require("apollo-server-express");
-const {
-	ApolloServerPluginLandingPageGraphQLPlayground,
-} = require("apollo-server-core");
-const { buildSubgraphSchema } = require("@apollo/subgraph");
+import dotenv from 'dotenv';
+import express from 'express';
+import { ApolloServer } from '@apollo/server';
+import { expressMiddleware } from '@apollo/server/express4';
+import { buildSubgraphSchema } from '@apollo/subgraph';
+import bodyParser from 'body-parser';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import cors from 'cors';
 
-const typeDefs = require("./graphql/schemas");
-const resolvers = require("./graphql/resolvers");
+dotenv.config()
+import typeDefs from "./graphql/schemas/index.js";
+import resolvers from "./graphql/resolvers/index.js";
 
 const app = express();
-
-// Middleware to check the path and refuse connections other than /graphql
-app.use((req, res, next) => {
-	if (req.path !== '/graphql') {
-		return res.status(403).send('Forbidden');
-	}
-	next();
-});
+const PORT = process.env.PORT;
 
 const server = new ApolloServer({
-	cors: true,
-	typeDefs,
-	resolvers,
-	schema: buildSubgraphSchema([{ typeDefs, resolvers }]),
-	plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
+	schema: buildSubgraphSchema({ typeDefs, resolvers }),
 });
+await server.start();
 
-// Ensure you start the ApolloServer before applying middleware
-async function startServer() {
-	await server.start();
-	server.applyMiddleware({ app, path: '/graphql' });
-
-	const PORT = process.env.PORT;
-	app.listen({ port: PORT }, () => {
-		console.log(`Server ready at http://localhost:${PORT}${server.graphqlPath}`);
-	});
-}
-
-startServer();
+app.use(cors());
+app.use('/data', express.static(path.join(dirname(fileURLToPath(import.meta.url)), 'data')));
+app.use('/graphql', bodyParser.json(), expressMiddleware(server));
+app.listen(PORT, () => {
+	console.log(`🚀  Server ready at http://localhost:${PORT}/graphql`);
+	console.log(`📂  Static files available at http://localhost:${PORT}/data`);
+});

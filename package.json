@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "description": "API Syntactic Extractor Service",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,13 +16,15 @@
   "license": "ISC",
   "dependencies": {
     "@apidevtools/swagger-parser": "^10.0.3",
-    "@apollo/subgraph": "^0.1.5",
-    "apollo-server": "^3.6.1",
-    "apollo-server-core": "^3.6.1",
+    "@apollo/server": "^4.9.3",
+    "@apollo/subgraph": "^2.5.5",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "flat": "^5.0.2",
     "fs": "^0.0.1-security",
+    "graphql-tag": "^2.12.6",
     "nodemon": "^2.0.15",
     "swagger-client": "^3.18.1",
     "winston": "^3.10.0"

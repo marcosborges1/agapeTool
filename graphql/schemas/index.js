@@ -1,8 +1,9 @@
-const { gql } = require("apollo-server");
-
-const querySchema = require("./query");
+import gql from 'graphql-tag';
+import querySchema from "./query.js";
 
 const typeDefs = gql`
 	${querySchema}
 `;
-module.exports = typeDefs;
+
+export default typeDefs
+
