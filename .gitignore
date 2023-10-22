@@ -5,6 +5,6 @@ node_modules
 .DS_Store
 package-lock.json
 _data/
-data/
+data/*
 .env
 logs/
